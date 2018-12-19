@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NO1S</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+    <script>
+    $( document ).ready(function() {
+    console.log( "ready!" );
+    var today = new Date();
+    var song, artist, link;
+    console.log(today);
+    day = today.getDate();
+    month = today.getMonth() + 1;
+    console.log(day, month);  
+    if (month == 12 && day < 28 || month == 1)
+    {
+     song = "I Heard It Through The Grapevine";
+     artist = "Marvin Gaye";
+     link = "https://open.spotify.com/track/4tMxTsEPybFSX1dq7BOC4K";
+    }
+    else if (month == 2 && day < 9)
+    {
+      song = "Crimson and Clover";
+      artist = "Tommy James and the Shondells";
+      link = "https://open.spotify.com/track/1vXuYPpkLjn1v06E2EsWQY";
+    }
+    else if (month == 2 && day < 23 || month == 3 < 9)
+    {
+      song = "Everyday People";
+      artist = "Sly and the Family Stone";
+      link = "https://open.spotify.com/track/4ZVZBc5xvMyV3WzWktn8i7";
+    }
+
+    $("#song").html(song);
+    $("#artist").html(artist);
+    $("#link").attr("href", link);
+});
+    </script>
+  </head>
+  <body>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="images/logo.svg" width="112" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+      
+            <a class="navbar-item" href="">
+                50s
+            </a>
+
+            <a class="navbar-item" href="60s.html">
+                60s
+            </a>
+
+            <a class="navbar-item">
+                70s
+            </a>
+
+            <a class="navbar-item">
+                80s
+            </a>
+
+            <a class="navbar-item">
+                90s
+            </a>
+
+            <a class="navbar-item">
+                00s
+            </a>
+
+            <a class="navbar-item" href="10s.html" >
+                10s
+            </a>
+            </div>
+          </div>
+      
+        </div>
+      </nav>
+      <section class="section">
+        <div class="container">
+          <h1 class="title">What is this?</h1>
+          <h2 class="subtitle">
+            NO1S is a website listing the No. 1 single for every year starting with 1950
+          </h2>
+        </div>
+      </section>
+      <section class="section">
+          <div class="container">
+            <h1 class="title">The No. 1 Record 50 Years Ago Today</h1>
+            <div class="column is-one-quarter">
+              <a id="link" target="_blank" >
+                <div class="card">
+                        <div class="card-image">
+                         
+                                <img src="images\records\yellow.svg">
+                        
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-content">
+                              <p id="song" class="song"></p>
+                              <p id="artist" class="artist"></p>
+                            </div>
+                          </div>
+                      
+                        </div>
+                      </div> 
+                </a>                       
+                    </div>
+          </div>
+        </section>
+  </body>
+</html>
